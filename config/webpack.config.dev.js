@@ -4,6 +4,19 @@ const path = require('path')
 
 module.exports = merge(base, {
   mode: 'development',
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendor',
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          priority: 2,
+          enforce: true,
+        },
+      },
+    },
+  },
   devServer: {
     contentBase: path.resolve(__dirname, '../dist'),
     proxy: {
