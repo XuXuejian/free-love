@@ -3,8 +3,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
 
-import Counter from './components/Counter'
-import Home from './components/Home'
+import Counter from './components/business/Counter'
+import Home from './components/business/Home'
 import store from '@/redux/store'
 import Login from './pages/Login'
 

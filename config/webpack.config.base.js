@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [devMode ? 'style-loader' : MiniCssExtractPlugin.loader],
       },
     ],
   },
@@ -52,6 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '福原爱',
       template: path.resolve(__dirname, '../public/index.html'),
+      minify: true,
     }),
   ],
 }
