@@ -1,5 +1,4 @@
 const merge = require('webpack-merge')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
@@ -8,7 +7,6 @@ const base = require('./webpack.config.base.js')
 module.exports = merge(base, {
   mode: 'production',
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({})],
     splitChunks: {
       cacheGroups: {
         vendor: {

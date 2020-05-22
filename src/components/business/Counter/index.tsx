@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { State } from '@/redux/reducers'
 
-import './style.css'
+import { Number } from './styled'
 import { signin } from '@/redux/actions/user'
 import { Signin } from '@/models/login'
 import { ThunkDispatch } from '@/models/redux'
@@ -24,7 +24,7 @@ const Counter: React.FC<Props> = props => {
   }
   return (
     <>
-      <div className="number">{props.phone}</div>
+      <Number>{props.phone}</Number>
       <button onClick={login}>登录</button>
     </>
   )
